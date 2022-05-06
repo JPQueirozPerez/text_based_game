@@ -19,7 +19,6 @@ public class InventoryController {
     public static Inventory addItemToInventory(HashMap<Item, Integer> items, Inventory playerInventory) {
         Item newItem = createItem();
 
-
         if (playerInventory.getCapacity() > 0) {
             if (compareItems(playerInventory.getItems(), newItem)) {
                 items.replace(newItem, items.get(newItem) + 1);
