@@ -104,7 +104,7 @@ public class FightService {
         player.setStrength(player.getStrength() + 5);
         player.setDefense(player.getDefense() + 5);
         player.setSpeed(player.getSpeed() + 5);
-        player.setSpeed(player.getDexterity() + 5);
+        player.setDexterity(player.getDexterity() + 5);
     }
 
     public static int valueGained(){
