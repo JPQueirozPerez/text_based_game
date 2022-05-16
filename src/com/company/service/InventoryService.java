@@ -78,12 +78,27 @@ public class InventoryService {
 
         player.getEquipment().put("head", item);
 
+        //player.getEquipment().
 
         System.out.println("ITEM = " + player.getEquipment());
+        System.out.println("ITEM = " + player.getEquipment().get("name"));
+        System.out.println("Attack Player: "+player.getStrength());
+        System.out.println("Name: "+player.get);
+        System.out.println("Value Item: "+player.getEquipment().get("head").getItemHabilities().get("attack"));
+
 
 
         for (Map.Entry<String, Item> entry : player.getEquipment().entrySet()) {
             System.out.println("Obtener clave + valor = " + entry.getKey() + " = " + entry.getValue());
+
+
+
+
+        for (Map.Entry<String, Item> entry : player.getEquipment().entrySet()) {
+           System.out.println("Obtener clave + valor = " + entry.getKey() + " = " + entry.getValue());
+
+        }
+
 
 
             System.out.println("Total poder = " + player.getTotalStrength());
