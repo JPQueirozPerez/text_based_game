@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.company.utils.Utilities.ANSI_RESET;
 import static com.company.utils.Utilities.YELLOW_BRIGHT;
@@ -75,16 +76,18 @@ public class InventoryService {
 
     public static void equippingPlayer(Player player , Item item) {
 
-
-        player.getEquipment().put("head" , item);
+        AtomicInteger ainteger= new AtomicInteger();
+        String valorParseado = ainteger.toString();
+        player.getEquipment().put(valorParseado, item);
+        ainteger.getAndIncrement();
 
         //player.getEquipment().
 
-        System.out.println("ITEM = " + player.getEquipment());
-        System.out.println("ITEM = " + player.getEquipment().get("name"));
-        System.out.println("Attack Player: "+player.getStrength());
-        System.out.println("Name: "+player.getEquipment().get("head"));
-        System.out.println("Value Item: "+player.getEquipment().get("head").getItemHabilities().get("attack"));
+//        System.out.println("ITEM = " + player.getEquipment());
+//        System.out.println("ITEM = " + player.getEquipment().get("name"));
+//        System.out.println("Attack Player: "+player.getStrength());
+//        System.out.println("Name: "+player.getEquipment().get("head"));
+//        System.out.println("Value Item: "+player.getEquipment().get("head").getItemHabilities().get("attack"));
 
 
 
@@ -97,8 +100,8 @@ public class InventoryService {
        // }
 
 
-        System.out.println("Total poder = " + player.getTotalStrength());
-        System.out.println("DEFENSE = " + player.getDefense());
+//        System.out.println("Total poder = " + player.getTotalStrength());
+//        System.out.println("DEFENSE = " + player.getDefense());
 
 
     }

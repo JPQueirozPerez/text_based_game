@@ -1,6 +1,7 @@
 package com.company.frontcontroller;
 
 import com.company.model.Player;
+import com.company.view.EquipmentView;
 
 import java.io.InputStream;
 import java.util.Scanner;
@@ -29,33 +30,34 @@ public class FrontController {
     private static void menuCharacterChoose(Player player) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Elige Menu");
+            System.out.println("MENU CHARACTER");
             System.out.println("1- Details Character");
             System.out.println("2- Equipment");
+            System.out.println("0- Return back menu");
             String valueChoose = scanner.nextLine();
             switch (valueChoose) {
                 case "1" -> {
-                    System.out.println("option 1");
+                    showCharacter(player);
+                    System.out.print("Press any key to return to Menu Character Choose");
+                    valueChoose = scanner.nextLine();
+                    menuCharacterChoose(player);
+                    break;
+
+                }
+                case "2" -> {
+                    EquipmentView.showEquipmentView(player);
+                    System.out.print("Press any key to return to  Menu Character Choose");
+                    valueChoose = scanner.nextLine();
                     menuCharacterChoose(player);
                     break;
                 }
-                case "2" -> {
-                    System.out.println("option 2");
-                    showEquipmentView(Player player);
+                case "0" -> {
+                    gameLoopView(player);
                     break;
                 }
-                case "3" -> System.out.println("Unknown command. Try again");
+                default -> System.out.println("Unknown command. Try again");
             }
         }
     }
 
-
-//    public static boolean isCreated(){
-//        Player player = null;
-//        if(player == null){
-//            return false;
-//        }else{
-//            return true;
-//        }
-//    }
 }
