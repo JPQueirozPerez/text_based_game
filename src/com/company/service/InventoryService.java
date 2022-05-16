@@ -83,7 +83,7 @@ public class InventoryService {
         System.out.println("ITEM = " + player.getEquipment());
         System.out.println("ITEM = " + player.getEquipment().get("name"));
         System.out.println("Attack Player: "+player.getStrength());
-        System.out.println("Name: "+player.get);
+        System.out.println("Name: "+playergetEquipment().get("head")
         System.out.println("Value Item: "+player.getEquipment().get("head").getItemHabilities().get("attack"));
 
 
