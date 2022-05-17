@@ -15,12 +15,14 @@ import static com.company.view.InventoryView.inventoryUseItem;
 
 public class InventoryService {
 
+
     public static Item createItem() {
         int value = new Random().nextInt((5 - 1) + 1);
 
         var reward = new Item();
 
         HashMap<String, Integer> itemHabilities = new HashMap<>();
+
 
         switch (value) {
             case 1 -> {
@@ -80,30 +82,6 @@ public class InventoryService {
         String valorParseado = ainteger.toString();
         player.getEquipment().put(valorParseado, item);
         ainteger.getAndIncrement();
-
-        //player.getEquipment().
-
-//        System.out.println("ITEM = " + player.getEquipment());
-//        System.out.println("ITEM = " + player.getEquipment().get("name"));
-//        System.out.println("Attack Player: "+player.getStrength());
-//        System.out.println("Name: "+player.getEquipment().get("head"));
-//        System.out.println("Value Item: "+player.getEquipment().get("head").getItemHabilities().get("attack"));
-
-
-
-
-
-
-       // for (Map.Entry<String, Item> entry : player.getEquipment().entrySet()) {
-       //    System.out.println("Obtener clave + valor = " + entry.getKey() + " = " + entry.getValue());
-
-       // }
-
-
-//        System.out.println("Total poder = " + player.getTotalStrength());
-//        System.out.println("DEFENSE = " + player.getDefense());
-
-
     }
 }
 
