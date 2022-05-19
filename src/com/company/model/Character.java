@@ -45,7 +45,7 @@ public class Character {
         this.charClass = charClass;
     }
 
-    public int getTotalStrength() {
+    public int getTotalStrength(int totalStrength) {
         return totalStrength;
     }
 

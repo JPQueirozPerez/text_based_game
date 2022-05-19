@@ -8,29 +8,39 @@ public class Item {
     private String type;
     private String description;
     private int price;
-    private HashMap<String, Integer> itemHabilities;
     private int index;
+    private int strength;
+    private  int speed;
+    private int defense;
+   // private HashMap<String, Integer> itemHabilities;
 
     public Item(){
     }
 
 
-    public Item(String name , String inventoryName , String type , String description , int price , HashMap<String, Integer> itemHabilities){
+   /* public Item(String name , String inventoryName , String type , String description , int price,HashMap<String, Integer> itemHabilities){
         this.name = name;
         this.inventoryName = inventoryName;
         this.type = type;
         this.description = description;
         this.price = price;
         this.itemHabilities = itemHabilities;
+    }*/
+    public Item(String name , String inventoryName , String type , String description , int price, int strength,int speed,int defense){
+        this.name = name;
+        this.inventoryName = inventoryName;
+        this.type = type;
+        this.description = description;
+        this.price = price;
+        this.strength = strength;
+        this.speed = speed;
+        this.defense = defense;
+
     }
 
-    public HashMap<String, Integer> getItemHabilities() {
-        return itemHabilities;
-    }
+  //  public HashMap<String, Integer> getItemHabilities() {    return itemHabilities;  }
 
-    public void setItemHabilities(HashMap<String, Integer> itemHabilities) {
-        this.itemHabilities = itemHabilities;
-    }
+   // public void setItemHabilities(HashMap<String, Integer> itemHabilities) { this.itemHabilities = itemHabilities;}
 
     public int getIndex() {
         return index;
@@ -77,6 +87,31 @@ public class Item {
         this.price = price;
     }
 
+    public int getStrength() {
+        return strength;
+    }
+
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setStrength(int strength) {
+        strength = strength;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
     @Override
     public boolean equals(Object o)
     {
@@ -120,6 +155,9 @@ public class Item {
                 ", description='" + description + '\'' +
                 ", price=" + price + '\'' +
                 ", index=" + index +
+                ",  strength=" + strength +
+                ",  speed=" + speed +
+                ",  defense=" + defense +
                 '}';
     }
 }
